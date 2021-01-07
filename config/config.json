@@ -47,6 +47,7 @@
          "Customer_data_new"
       ],
       "path":"Customer_data_new.csv",
+      "out_path": "",
       "primary_columns_res":[
          "account_number",
          "account_name",
@@ -66,11 +67,11 @@
       "password":"test"
          },
    "postgres_db": {
-      "dbname": "address-mdm",
-      "user": "postgres",
-      "host": "localhost",
+      "dbname": "postgres",
+      "user": "mdmadmin",
+      "host": "mdmdb.cebesgtz63jv.us-east-1.rds.amazonaws.com",
       "port": "5432",
-      "password": "postgres"
+      "password": "x8gP8?Jx"
    },
    "postgres_tables": {
       "stage_table": "new_data_source",
@@ -81,5 +82,8 @@
       "unresolved_cluster_table": "new_unresolved_cluster",
       "master_pre_table": "master_pre_address"
    },
-   "cut_of_scores":  60
+   "cut_of_scores":  60,
+
+   "final_output_cols" : ["account_number","account_name", "address_1", "address_2", "city", "country", "postal_code", "ult_parent_num"]
+
 }
